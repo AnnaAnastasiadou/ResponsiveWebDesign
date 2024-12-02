@@ -1,0 +1,81 @@
+
+body {
+    width: 100%;
+    height: 100%;
+    margin 0;
+    color: #000000;
+    background-color: #c0d3f0;
+    font-family: Tahoma, sans-serif;
+    font-size: 16px;
+}
+
+.form-container{
+    margin: 5%;
+    padding: 5%;
+    background-color: #ffffff;
+}
+
+h1, p {
+    margin: 1em auto;
+    text-align: center;
+}
+
+form {
+    width: 60 vw;
+    max-width: 500 px;
+    min-width: 300 px;
+    margin: 0 auto;
+    padding-bottom: 2em;
+}
+
+fieldset{
+    border: none;
+    padding: 1em 0;
+    border-bottom: 2px solid #c0d3f0;
+}
+
+legend {
+    padding-top: 1.5em;
+}
+
+fieldset:last-of-type{
+    border-bottom: none
+}
+
+fieldset:first-child{
+    border-top: 2px solid #c0d3f0;
+}
+
+label {
+    display: block;
+    margin: 0.5rem 0;
+}
+
+input, textarea, select {
+    margin: 10px 0 0 0;
+    width: 100%;
+    min-height: 2em;
+}
+
+input, textarea {
+    background-color: #c0d3f038;
+    border: none;
+}
+
+.inline {
+    width: unset; /*unset width set from input*/
+    margin: 0 0.5em 0 0;
+    vertical-align: middle;
+    display: inline;
+}
+
+input[type="submit"] {
+    display: block;
+    width: 10%;
+    margin: 1em auto;
+    height: 2em;
+    font-size: 1.1rem;
+    background-color: #98b8e8;
+    border: 1px solid #00265f;
+    min-width: 200px;
+}
