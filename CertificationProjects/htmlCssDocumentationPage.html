@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width. initial-scale=1.0"/>
+        <title>HTMl and CSS Fundamentals</title>
+        <link rel="stylesheet" href="./htmlCssDocumentationPageStyles.css"/>
+    </head>
+    <body>
+        <main id="main-doc">
+            <header>HTML and CSS Fundamentals</header>
+            <section class="main-section" id="Introduction">
+                <header>Introduction</header>
+                <article>
+                    <h1>What is HTML</h1>
+                    <p>
+                        HTML (HyperText Markup Language) is the standard markup language used to create web pages.
+                        It provides the structrue of a webpage by using elements (tags) to define the different parts of a page
+                        such as heading, paragraphs, links, images, and more.
+                    </p>
+                    <h1>What is CSS</h1>
+                    <p>
+                        CSS (Cascading Style Sheets) is used to style and layout web pages.
+                        It controls the color, font, spacing, positioning, and responsiveness of HTML elements, 
+                        ensuring an aesthetically pleasing and functional design.
+                    </p>
+                    <h1>How HTML and CSS Work Together</h1>
+                    <p>
+                        HTML structures the content, while CSS enhances its presentation. 
+                        Without CSS, HTML pages appear as plain text and images. 
+                        Combining them allows for visually engaging web pages with structured layouts and responsive designs.
+                    </p>
+                </article>
+            </section>
+            <section class="main-section" id="Html_basics">
+                <header>HTML Basics</header>
+                <article>
+                    <h1>HTML Structure</h1>
+                    <p>Every HTML document has a basic structure.</p>
+                    <pre><code>
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html&gt;
+                            &lt;head&gt;
+                                &lt;title&gt;Page Title&lt;/title&gt;
+                            &lt;/head&gt;
+                            &lt;body&gt;
+                                &lt;h1&gt;This is a Heading&lt;/h1&gt;
+                                &lt;p&gt;This is a paragraph.&lt;/p&gt;
+                            &lt;/body&gt;
+                        &lt;/html&gt;
+                    </code></pre>
+                    
+                    <ul>
+                        <li><code>&lt;!DOCTYPE html&gt;</code> declares the document type</li>
+                        <li><code>&lt;html&gt;</code> is the root element of an HTML page</li>
+                        <li><code>&lt;head&gt;</code> contains meta information about the document</li>
+                    </ul>
+            
+                    <h1>Common HTML Elements</h1>
+            
+                    <ul>
+                        <li><code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code> headings</li>
+                        <li><code>&lt;p&gt;</code> paragraphs</li>
+                        <li><code>&lt;a href="https://example.com"&gt;Click here&lt;/a&gt;</code> to create hyperlinks</li>
+                        <li><code>&lt;img src="image.jpg alt="Description"&gt;</code> images</li>
+                        <li><code>&lt;div&gt;</code> for layout sections</li>
+                        <li><code>&lt;span&gt;</code> for inline styling</li>
+                    </ul>
+                
+                    <h1>Lists</h1>
+
+                    <p>In HTML, there are two main types of lists: unordered and ordered. The difference lies in how the items are presented. Here’s an explanation of each type:</p>
+
+                    <h2>Unordered List</h2>
+                    <p>An unordered list is used to display a list of items in no particular order. 
+                        It is typically represented with bullet points.
+                    </p>
+                    <ul>
+                        <li><code>&lt;ul&gt;</code>: Defines an unordered list.</li>
+                        <li><code>&lt;li&gt;</code>: Defines each list item within the unordered list.</li>
+                    </ul>
+
+                    <p>Here is an example of an unordered list:</p>
+
+                    <pre><code>
+                    &lt;ul&gt;
+                        &lt;li&gt;Item 1&lt;/li&gt;
+                        &lt;li&gt;Item 2&lt;/li&gt;
+                        &lt;li&gt;Item 3&lt;/li&gt;
+                    &lt;/ul&gt;
+                    </code></pre>
+
+                    <h2>Ordered List</h2>
+                    <p>An ordered list is used to display a list of items in a specific, numbered order. Each item is numbered by default.</p>
+                    <ul>
+                        <li><code>&lt;ol&gt;</code>: Defines an ordered list.</li>
+                        <li><code>&lt;li&gt;</code>: Defines each list item within the ordered list.</li>
+                    </ul>
+
+                    <p>Here is an example of an ordered list:</p>
+
+                    <pre><code>
+                    &lt;ol&gt;
+                        &lt;li&gt;First&lt;/li&gt;
+                        &lt;li&gt;Second&lt;/li&gt;
+                        &lt;li&gt;Third&lt;/li&gt;
+                    &lt;/ol&gt;
+                    </code></pre>
+                    <h1>Tables</h1>
+                    <p>The <code>&lt;table&gt;</code> element is used to represent tabular data. 
+                        It contains rows and columns to display data in a grid-like format. 
+                        The following tags are typically used inside a table:</p>
+
+                        <ul>
+                            <li><code>&lt;table&gt;</code>: Defines the table itself.</li>
+                            <li><code>&lt;caption&gt;</code>: Provides a title or description for the table.</li>
+                            <li><code>&lt;thead&gt;</code>: Groups the header content in the table. It typically contains the column headings.</li>
+                            <li><code>&lt;tr&gt;</code>: Represents a row in the table.</li>
+                            <li><code>&lt;th&gt;</code>: Defines a header cell in the table. It’s usually bold and centered by default.</li>
+                            <li><code>&lt;tbody&gt;</code>: Groups the main content of the table (the body). It typically contains the rows of data.</li>
+                            <li><code>&lt;td&gt;</code>: Defines a cell of data inside the table rows.</li>
+                        </ul>
+                        
+                        <p>Here is an example of a simple table:</p>
+                    <pre><code>
+                        &lt;table&gt;
+                            &lt;caption&gt;Sample Table&lt;/caption&gt;
+                            &lt;thead&gt;
+                                &lt;tr&gt;
+                                    &lt;th&gt;Header 1&lt;/th&gt;
+                                    &lt;th&gt;Header 2&lt;/th&gt;
+                                    &lt;th&gt;Header 3&lt;/th&gt;
+                                &lt;/tr&gt;
+                            &lt;/thead&gt;
+                            &lt;tbody&gt;
+                                &lt;tr&gt;
+                                    &lt;td&gt;Row 1, Cell 1&lt;/td&gt;
+                                    &lt;td&gt;Row 1, Cell 2&lt;/td&gt;
+                                    &lt;td&gt;Row 1, Cell 3&lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;tr&gt;
+                                    &lt;td&gt;Row 2, Cell 1&lt;/td&gt;
+                                    &lt;td&gt;Row 2, Cell 2&lt;/td&gt;
+                                    &lt;td&gt;Row 2, Cell 3&lt;/td&gt;
+                                &lt;/tr&gt;
+                            &lt;/tbody&gt;
+                        &lt;/table&gt;
+                    </code></pre>
+                    <h1>Forms</h1>
+                    <p>Forms are used to collect user input. They can contain various input elements such as
+                         text fields, checkboxes, radio buttons, and more. The <code>&lt;form&gt;</code> element is used 
+                         to create a form, and the following tags are commonly used inside a form:
+                    </p>
+                    <ul>
+                        <li><code>&lt;form&gt;</code>: This tag defines the tag itself. It can include attributes 
+                            such as action (the URL where the form data should be sent) and method 
+                            (the HTTP method to use, such as GET or POST).
+                        </li>
+                             and method to specify where the form data should be sent and how it should be processed.</li>
+                        <li><code>&lt;input&gt;</code>: Represents an input field where users can enter data.
+                            The type attribute specifies the type of input, such as text, password, checkbox, radio, etc.
+                        </li>
+                        <li><code>&lt;label&gt;</code>: Provides a label for an input field. 
+                            It improves accessibility by associating the label with the corresponding input field.
+                        </li>
+                        <li><code>&lt;textarea&gt;</code>: This tag creates a multi-line text input field, 
+                            allowing users to enter larger amounts of text.
+                        </li>
+                        <li><code>&lt;button&gt;</code>: Creates a clickable button, which can be used to
+                            submit the form or trigger other actions.</li>
+                        <li><code>&lt;select&gt;</code>: Defines a drop-down list, allowing users
+                            to select one or more options from a list which are inserted using the &lt;option&gt; tag.</li>
+                    </ul>
+                    <p>Here is an example of a simple form:</p>
+                    <pre><code>
+                        &lt;form action="/submit-form" method="post"&gt;
+                            &lt;label for="name"&gt;Name:&lt;/label&gt;
+                            &lt;input type="text" id="name" name="name" required&gt;
+                            &lt;label for="email"&gt;Email:&lt;/label&gt;
+                            &lt;input type="email" id="email" name="email" required&gt;
+                            &lt;label for="message"&gt;Message:&lt;/label&gt;
+                            &lt;textarea id="message" name="message"&gt;&lt;/textarea&gt;
+                            &lt;button type="submit"&gt;Submit&lt;/button&gt;
+                        &lt;/form&gt;
+                    </code></pre>
+                    <h1>Semantic HTML</h1>
+                    <p>
+                        Semantic HTML refers to the use of HTML markup that conveys meaning about the content contained
+                         within. By using semantic elements, developers can create more meaningful and accessible web pages. 
+                         Semantic HTML helps search engines and assistive technologies understand the structure and context of the content, 
+                         improving SEO and accessibility.
+                    </p>
+                    <p>Some common semantic elements include:</p>
+                    <ul>
+                        <li><code>&lt;header&gt;</code>: Represents introductory content at the beginning of a section or page.</li>
+                        <li><code>&lt;nav&gt;</code>: Contains navigation links to other pages or sections of the same page.</li>
+                        <li><code>&lt;main&gt;</code>: Contains the main content of the page.</li>
+                        <li><code>&lt;article&gt;</code>: Represents an independent piece of content that can stand alone.</li>
+                        <li><code>&lt;section&gt;</code>: Defines a thematic grouping of content, typically with a heading.</li>
+                        <li><code>&lt;footer&gt;</code>: Contains footer information such as copyright, contact information, etc.</li>
+                </article>
+            </section>
+            <section class="main-section" id="Css_basics">
+                <header>CSS Basics</header>
+                <article>
+                    <h1>CSS Syntax</h1>
+                    <p>CSS (Cascading Style Sheets) uses a syntax that consists of a selector and a declaration block. 
+                        The selector targets the HTML element you want to style, and the declaration block contains the 
+                        property-value pairs that define the style. Here’s an example of CSS syntax:</p>
+                    <pre><code>
+                        selector {
+                            property: value;
+                        }
+                    </code></pre>
+                    <p>For example, to change the color of all <code>&lt;p&gt;</code> elements to red, you would write:</p>
+                    <pre><code>
+                        p {
+                            color: red;
+                        }
+                    </code></pre>
+                    <h1>Common CSS Properties</h1>
+                    <p>CSS properties define how HTML elements are displayed on a webpage. 
+                        Here are some common CSS properties and their uses:</p>
+                    <ul>
+                        <li><code>color</code>: Sets the color of text.</li>
+                        <li><code>font-size</code>: Sets the size of the font.</li>
+                        <li><code>background-color</code>: Sets the background color of an element.</li>
+                        <li><code>margin</code>: Sets the margin around an element.</li>
+                        <li><code>padding</code>: Sets the padding inside an element.</li>
+                        <li><code>border</code>: Sets the border around an element.</li>
+                        <li><code>display</code>: Specifies how an element is displayed.</li>
+                        <li><code>position</code>: Specifies the positioning method of an element.</li>
+                    </ul>
+                    <h1>CSS Selectors</h1>
+                    <p>CSS selectors are used to target specific HTML elements for styling. 
+                        There are several types of selectors, including:</p>
+                    <ul>
+                        <li>Element Selector: Targets all instances of a specific HTML element,
+                            eg. <code>h1 { color: blue; }</code>
+                        </li>
+                        <li>Class Selector: Targets elements with a specific class attribute, eg. <code>.title { font-size: 24px; }</code></li>
+                        <li>ID Selector: Targets an element with a specific ID attribute, eg. <code>#header { background-color: black; }</code></li>
+                        <li>Universal Selector: Targets all elements on a page, eg. <code>* { margin: 0; }</code></li>
+                        <li>Descendant Selector: Targets an element that is a descendant of another element, eg. <code>div p { color: red; }</code></li>
+                        <li>Pseudo-class Selector: Targets elements based on their state or position, eg. <code>a:hover { text-decoration: underline; }</code></li>
+                        <li>Pseudo-element Selector: Targets specific parts of an element, eg. <code>p::first-line { font-weight: bold; }</code></li>
+                        <li>Attribute Selector: Targets elements based on their attributes, eg. <code>input[type="text"] { border: 1px solid black; }</code></li>
+                        <li>Grouping Selector: Targets multiple selectors at once, eg. <code>h1, h2, h3 { color: blue; }</code></li>
+                        <li>Child Selector: Targets an element that is a direct child of another element, eg. <code>ul &gt; li { list-style-type: none; }</code></li>
+                    </ul>
+                </article>
+            </section>
+            <section class="main-section" id="Css_layout_and_positioning">
+                <header>CSS Layout and Positioning</header>
+            </section>
+            <section class="main-section" id="Responsive_design_and_media_queries">
+                <header>Responsive Design and Media Queries</header>
+            </section>
+            <section class="main-section" id="Example_project">
+                <header>Example Project</header>
+            </section>
+            <section class="main-section" id="References">
+                <header>References</header>
+                <!-- use W3 schools, and mdn web docs -->
+            </section>
+
+        </main>
+    </body>
+</html>
