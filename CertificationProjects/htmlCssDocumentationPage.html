@@ -248,20 +248,174 @@
                         <li>Grouping Selector: Targets multiple selectors at once, eg. <code>h1, h2, h3 { color: blue; }</code></li>
                         <li>Child Selector: Targets an element that is a direct child of another element, eg. <code>ul &gt; li { list-style-type: none; }</code></li>
                     </ul>
+                    <h1>CSS Units</h1>
+                    <p>CSS uses various units for measurements, including:</p>
+                    <ul>
+                        <li><code>px</code>: Pixels, an absolute unit.</li>
+                        <li><code>em</code>: Relative to the font-size of the element.</li>
+                        <li><code>rem</code>: Relative to the font-size of the root element.</li>
+                        <li><code>%</code>: Percentage of the parent element.</li>
+                        <li><code>vh</code> and <code>vw</code>: Relative to the viewport height and width.</li>
+                    </ul>
+
+                    <h1>CSS Colors</h1>
+                    <p>Colors in CSS can be defined using:</p>
+                    <ul>
+                        <li>Named colors (e.g., <code>red</code>)</li>
+                        <li>Hexadecimal (e.g., <code>#ff0000</code>)</li>
+                        <li>RGB (e.g., <code>rgb(255, 0, 0)</code>)</li>
+                        <li>RGBA (e.g., <code>rgba(255, 0, 0, 0.5)</code>)</li>
+                        <li>HSL (e.g., <code>hsl(0, 100%, 50%)</code>)</li>
+                    </ul>
+                    <h1>CSS Box Model</h1>
+                    <p>The CSS box model is a fundamental concept in web design that defines the structure of elements on a webpage. 
+                        It consists of four parts: content, padding, border, and margin. 
+                        Understanding the box model is essential for creating layouts and styling elements effectively.</p>
+                    <ul>
+                        <li>Content: The actual content of the element, such as text or images.</li>
+                        <li>Padding: The space between the content and the border.</li>
+                        <li>Border: The border around the padding and content.</li>
+                        <li>Margin: The space between the border and other elements on the page.</li>
+                    </ul>
+                    <p>Here is an example of the box model:</p>
+                    <pre><code>
+                        .box {
+                            width: 200px;
+                            height: 200px;
+                            padding: 20px;
+                            border: 1px solid black;
+                            margin: 10px;
+                        }
+                    </code></pre>
                 </article>
             </section>
             <section class="main-section" id="Css_layout_and_positioning">
                 <header>CSS Layout and Positioning</header>
+                <article>
+                    <h1>CSS Layout Techniques</h1>
+                    <p>CSS provides several techniques for creating layouts on web pages. Two of the most popular methods are Flexbox and CSS Grid.</p>
+            
+                    <h2>Flexbox</h2>
+                    <p>Flexbox (Flexible Box Layout) is a one-dimensional layout model that allows you to design a layout structure in a more efficient way than traditional methods. It is particularly useful for aligning items in a row or column.</p>
+                    <p>Here’s an example of a simple navigation bar using Flexbox:</p>
+                    <pre><code>
+                        .nav-container {
+                            display: flex;
+                            justify-content: space-around; /* Distributes space evenly between items */
+                            align-items: center; /* Centers items vertically */
+                            background-color: #333;
+                            padding: 10px;
+                        }
+            
+                        .nav-item {
+                            color: white;
+                            text-decoration: none;
+                            padding: 10px 20px;
+                        }
+            
+                        .nav-item:hover {
+                            background-color: #555; /* Changes background on hover */
+                        }
+                    </code></pre>
+                    <p>HTML structure for the navigation bar:</p>
+                    <pre><code>
+                        &lt;div class="nav-container"&gt;
+                            &lt;a href="#" class="nav-item"&gt;Home&lt;/a&gt;
+                            &lt;a href="#" class="nav-item"&gt;About&lt;/a&gt;
+                            &lt;a href="#" class="nav-item"&gt;Services&lt;/a&gt;
+                            &lt;a href="#" class="nav-item"&gt;Contact&lt;/a&gt;
+                        &lt;/div&gt;
+                    </code></pre>
+            
+                    <h2>CSS Grid</h2>
+                    <p>CSS Grid Layout is a two-dimensional layout system that allows you to create complex layouts easily. It enables you to define rows and columns, and place items within that grid.</p>
+                    <p>Here’s an example of a simple photo gallery using CSS Grid:</p>
+                    <pre><code>
+                        .gallery-container {
+                            display: grid;
+                            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Creates responsive columns */
+                            grid-gap: 10px; /* Space between grid items */
+                        }
+            
+                        .gallery-item {
+                            background-color: #eee;
+                            padding: 20px;
+                            text-align: center;
+                            border: 1px solid #ccc;
+                        }
+                    </code></pre>
+                    <p>HTML structure for the photo gallery:</p>
+                    <pre><code>
+                        &lt;div class="gallery-container"&gt;
+                            &lt;div class="gallery-item"&gt;Image 1&lt;/div&gt;
+                            &lt;div class="gallery-item"&gt;Image 2&lt;/div&gt;
+                            &lt;div class="gallery-item"&gt;Image 3&lt;/div&gt;
+                            &lt;div class="gallery-item"&gt;Image 4&lt;/div&gt;
+                            &lt;div class="gallery-item"&gt;Image 5&lt;/div&gt;
+                            &lt;div class="gallery-item"&gt;Image 6&lt;/div&gt;
+                        &lt;/div&gt;
+                    </code></pre>
+                    <h1>CSS Positioning</h1>
+                    <p>CSS positioning allows you to control the placement of elements on a webpage. There are several positioning methods:</p>
+                    <ul>
+                        <li><strong>Static</strong>: The default positioning; elements are positioned according to the normal flow of the document.</li>
+                        <li><strong>Relative</strong>: Positioned relative to its normal position. You can use the properties <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code> to adjust its position.</li>
+                        <li><strong>Absolute</strong>: Positioned relative to the nearest positioned ancestor (not static). It is removed from the normal document flow.</li>
+                        <li><strong>Fixed</strong>: Positioned relative to the viewport, meaning it stays in the same place even when the page is scrolled.</li>
+                        <li><strong>Sticky</strong>: A hybrid of relative and fixed positioning. It toggles between relative and fixed, depending on the scroll position.</li>
+                    </ul>
+                </article>
             </section>
             <section class="main-section" id="Responsive_design_and_media_queries">
                 <header>Responsive Design and Media Queries</header>
-            </section>
-            <section class="main-section" id="Example_project">
-                <header>Example Project</header>
+                <article>
+                    <h1>Responsive Design</h1>
+                    <p>Responsive design is an approach to web design that makes web pages render well on a variety of devices and window or screen sizes. The goal is to ensure that users have a good viewing experience, regardless of the device they are using.</p>
+                    <p>To achieve responsive design, it is important to include the following meta tag in the <code>&lt;head&gt;</code> section of your HTML document:</p>
+                    <pre><code>
+                        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                    </code></pre>
+                    <p>This meta tag sets the viewport width to the device's width and sets the initial zoom level to 1.0, ensuring that your layout is responsive on mobile devices.</p>
+                    <p>Responsive design can be achieved through flexible grids, layouts, images, and CSS media queries.</p>
+            
+                    <h1>Media Queries</h1>
+                    <p>Media queries are a powerful feature of CSS that allow you to apply styles based on the characteristics of the device, such as its width, height, orientation, and resolution. This enables you to create responsive designs that adapt to different screen sizes.</p>
+                    <p>The basic syntax of a media query is as follows:</p>
+                    <pre><code>
+                        @media (condition) {
+                            /* CSS rules here */
+                        }
+                    </code></pre>
+                    <p>For example, to change the background color of a page for screens smaller than 600 pixels, you would write:</p>
+                    <pre><code>
+                        @media (max-width: 600px) {
+                            body {
+                                background-color: lightblue;
+                            }
+                        }
+                    </code></pre>
+                    <p>You can also combine multiple conditions:</p>
+                    <pre><code>
+                        @media (min-width: 600px) and (max-width: 1200px) {
+                            body {
+                                background-color: lightgreen;
+                            }
+                        }
+                    </code></pre>
+                    <p>Using media queries, you can adjust styles for different devices, ensuring a consistent and user-friendly experience across all platforms.</p>
+                </article>
             </section>
             <section class="main-section" id="References">
                 <header>References</header>
-                <!-- use W3 schools, and mdn web docs -->
+                <article>
+                    <p>Here are some valuable resources for learning more about HTML, CSS, and web development:</p>
+                    <ul>
+                        <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a> - A comprehensive resource for learning web technologies, including HTML, CSS, JavaScript, and more.</li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web" target="_blank">MDN Web Docs</a> - A detailed documentation site for web developers, offering guides, tutorials, and references for HTML, CSS, and JavaScript.</li>
+                        <li><a href="https://css-tricks.com/" target="_blank">CSS-Tricks</a> - A website dedicated to all things CSS, featuring articles, tutorials, and tips for web design and development.</li>
+                        <li><a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp</a> - A nonprofit organization that offers free coding bootcamps and resources for learning web development, including HTML and CSS.</li>
+                    </ul>
+                </article>
             </section>
 
         </main>
