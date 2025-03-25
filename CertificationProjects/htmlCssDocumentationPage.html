@@ -59,7 +59,8 @@
                 <article>
                     <h1>HTML Structure</h1>
                     <p>Every HTML document has a basic structure.</p>
-                    <pre><code>
+                    <pre>
+                        <code>
                         &lt;!DOCTYPE html&gt;
                         &lt;html&gt;
                             &lt;head&gt;
@@ -70,7 +71,8 @@
                                 &lt;p&gt;This is a paragraph.&lt;/p&gt;
                             &lt;/body&gt;
                         &lt;/html&gt;
-                    </code></pre>
+                        </code>
+                    </pre>
                     
                     <ul>
                         <li><code>&lt;!DOCTYPE html&gt;</code> declares the document type</li>
@@ -104,13 +106,15 @@
 
                     <p>Here is an example of an unordered list:</p>
 
-                    <pre><code>
-                    &lt;ul&gt;
-                        &lt;li&gt;Item 1&lt;/li&gt;
-                        &lt;li&gt;Item 2&lt;/li&gt;
-                        &lt;li&gt;Item 3&lt;/li&gt;
-                    &lt;/ul&gt;
-                    </code></pre>
+                    <pre>
+                        <code>
+                        &lt;ul&gt;
+                            &lt;li&gt;Item 1&lt;/li&gt;
+                            &lt;li&gt;Item 2&lt;/li&gt;
+                            &lt;li&gt;Item 3&lt;/li&gt;
+                        &lt;/ul&gt;
+                        </code>
+                    </pre>
 
                     <h2>Ordered List</h2>
                     <p>An ordered list is used to display a list of items in a specific, numbered order. Each item is numbered by default.</p>
@@ -121,13 +125,15 @@
 
                     <p>Here is an example of an ordered list:</p>
 
-                    <pre><code>
-                    &lt;ol&gt;
-                        &lt;li&gt;First&lt;/li&gt;
-                        &lt;li&gt;Second&lt;/li&gt;
-                        &lt;li&gt;Third&lt;/li&gt;
-                    &lt;/ol&gt;
-                    </code></pre>
+                    <pre>
+                        <code>
+                        &lt;ol&gt;
+                            &lt;li&gt;First&lt;/li&gt;
+                            &lt;li&gt;Second&lt;/li&gt;
+                            &lt;li&gt;Third&lt;/li&gt;
+                        &lt;/ol&gt;
+                        </code>
+                    </pre>
                     <h1>Tables</h1>
                     <p>The <code>&lt;table&gt;</code> element is used to represent tabular data. 
                         It contains rows and columns to display data in a grid-like format. 
@@ -144,7 +150,8 @@
                         </ul>
                         
                         <p>Here is an example of a simple table:</p>
-                    <pre><code>
+                    <pre>
+                        <code>
                         &lt;table&gt;
                             &lt;caption&gt;Sample Table&lt;/caption&gt;
                             &lt;thead&gt;
@@ -167,7 +174,8 @@
                                 &lt;/tr&gt;
                             &lt;/tbody&gt;
                         &lt;/table&gt;
-                    </code></pre>
+                        </code>
+                    </pre>
                     <h1>Forms</h1>
                     <p>Forms are used to collect user input. They can contain various input elements such as
                          text fields, checkboxes, radio buttons, and more. The <code>&lt;form&gt;</code> element is used 
@@ -194,7 +202,8 @@
                             to select one or more options from a list which are inserted using the &lt;option&gt; tag.</li>
                     </ul>
                     <p>Here is an example of a simple form:</p>
-                    <pre><code>
+                    <pre>
+                        <code>
                         &lt;form action="/submit-form" method="post"&gt;
                             &lt;label for="name"&gt;Name:&lt;/label&gt;
                             &lt;input type="text" id="name" name="name" required&gt;
@@ -204,7 +213,8 @@
                             &lt;textarea id="message" name="message"&gt;&lt;/textarea&gt;
                             &lt;button type="submit"&gt;Submit&lt;/button&gt;
                         &lt;/form&gt;
-                    </code></pre>
+                        </code>
+                    </pre>
                     <h1>Semantic HTML</h1>
                     <p>
                         Semantic HTML refers to the use of HTML markup that conveys meaning about the content contained
@@ -229,17 +239,21 @@
                     <p>CSS (Cascading Style Sheets) uses a syntax that consists of a selector and a declaration block. 
                         The selector targets the HTML element you want to style, and the declaration block contains the 
                         property-value pairs that define the style. Here’s an example of CSS syntax:</p>
-                    <pre><code>
+                    <pre>
+                        <code>
                         selector {
                             property: value;
                         }
-                    </code></pre>
+                        </code>
+                    </pre>
                     <p>For example, to change the color of all <code>&lt;p&gt;</code> elements to red, you would write:</p>
-                    <pre><code>
+                    <pre>
+                        <code>
                         p {
                             color: red;
                         }
-                    </code></pre>
+                        </code>
+                    </pre>
                     <h1>Common CSS Properties</h1>
                     <p>CSS properties define how HTML elements are displayed on a webpage. 
                         Here are some common CSS properties and their uses:</p>
@@ -300,7 +314,8 @@
                         <li>Margin: The space between the border and other elements on the page.</li>
                     </ul>
                     <p>Here is an example of the box model:</p>
-                    <pre><code>
+                    <pre>
+                        <code>
                         .box {
                             width: 200px;
                             height: 200px;
@@ -308,7 +323,8 @@
                             border: 1px solid black;
                             margin: 10px;
                         }
-                    </code></pre>
+                        </code>
+                    </pre>
                 </article>
             </section>
             <section class="main-section" id="Css_layout_and_positioning">
@@ -320,7 +336,8 @@
                     <h2>Flexbox</h2>
                     <p>Flexbox (Flexible Box Layout) is a one-dimensional layout model that allows you to design a layout structure in a more efficient way than traditional methods. It is particularly useful for aligning items in a row or column.</p>
                     <p>Here’s an example of a simple navigation bar using Flexbox:</p>
-                    <pre><code>
+                    <pre>
+                        <code>
                         .nav-container {
                             display: flex;
                             justify-content: space-around; /* Distributes space evenly between items */
@@ -338,21 +355,25 @@
                         .nav-item:hover {
                             background-color: #555; /* Changes background on hover */
                         }
-                    </code></pre>
+                        </code>
+                    </pre>
                     <p>HTML structure for the navigation bar:</p>
-                    <pre><code>
+                    <pre>
+                        <code>
                         &lt;div class="nav-container"&gt;
                             &lt;a href="#" class="nav-item"&gt;Home&lt;/a&gt;
                             &lt;a href="#" class="nav-item"&gt;About&lt;/a&gt;
                             &lt;a href="#" class="nav-item"&gt;Services&lt;/a&gt;
                             &lt;a href="#" class="nav-item"&gt;Contact&lt;/a&gt;
                         &lt;/div&gt;
-                    </code></pre>
+                        </code>
+                    </pre>
             
                     <h2>CSS Grid</h2>
                     <p>CSS Grid Layout is a two-dimensional layout system that allows you to create complex layouts easily. It enables you to define rows and columns, and place items within that grid.</p>
                     <p>Here’s an example of a simple photo gallery using CSS Grid:</p>
-                    <pre><code>
+                    <pre>
+                        <code>
                         .gallery-container {
                             display: grid;
                             grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Creates responsive columns */
@@ -365,9 +386,11 @@
                             text-align: center;
                             border: 1px solid #ccc;
                         }
-                    </code></pre>
+                        </code>
+                    </pre>
                     <p>HTML structure for the photo gallery:</p>
-                    <pre><code>
+                    <pre>
+                        <code>
                         &lt;div class="gallery-container"&gt;
                             &lt;div class="gallery-item"&gt;Image 1&lt;/div&gt;
                             &lt;div class="gallery-item"&gt;Image 2&lt;/div&gt;
@@ -376,7 +399,8 @@
                             &lt;div class="gallery-item"&gt;Image 5&lt;/div&gt;
                             &lt;div class="gallery-item"&gt;Image 6&lt;/div&gt;
                         &lt;/div&gt;
-                    </code></pre>
+                        </code>
+                    </pre>
                     <h1>CSS Positioning</h1>
                     <p>CSS positioning allows you to control the placement of elements on a webpage. There are several positioning methods:</p>
                     <ul>
@@ -394,36 +418,44 @@
                     <h1>Responsive Design</h1>
                     <p>Responsive design is an approach to web design that makes web pages render well on a variety of devices and window or screen sizes. The goal is to ensure that users have a good viewing experience, regardless of the device they are using.</p>
                     <p>To achieve responsive design, it is important to include the following meta tag in the <code>&lt;head&gt;</code> section of your HTML document:</p>
-                    <pre><code>
+                    <pre>
+                        <code>
                         &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-                    </code></pre>
+                        </code>
+                    </pre>
                     <p>This meta tag sets the viewport width to the device's width and sets the initial zoom level to 1.0, ensuring that your layout is responsive on mobile devices.</p>
                     <p>Responsive design can be achieved through flexible grids, layouts, images, and CSS media queries.</p>
             
                     <h1>Media Queries</h1>
                     <p>Media queries are a powerful feature of CSS that allow you to apply styles based on the characteristics of the device, such as its width, height, orientation, and resolution. This enables you to create responsive designs that adapt to different screen sizes.</p>
                     <p>The basic syntax of a media query is as follows:</p>
-                    <pre><code>
+                    <pre>
+                        <code>
                         @media (condition) {
                             /* CSS rules here */
                         }
-                    </code></pre>
+                        </code>
+                    </pre>
                     <p>For example, to change the background color of a page for screens smaller than 600 pixels, you would write:</p>
-                    <pre><code>
+                    <pre>
+                        <code>
                         @media (max-width: 600px) {
                             body {
                                 background-color: lightblue;
                             }
                         }
-                    </code></pre>
+                        </code>
+                    </pre>
                     <p>You can also combine multiple conditions:</p>
-                    <pre><code>
+                    <pre>
+                        <code>
                         @media (min-width: 600px) and (max-width: 1200px) {
                             body {
                                 background-color: lightgreen;
                             }
                         }
-                    </code></pre>
+                        </code>
+                    </pre>
                     <p>Using media queries, you can adjust styles for different devices, ensuring a consistent and user-friendly experience across all platforms.</p>
                 </article>
             </section>
