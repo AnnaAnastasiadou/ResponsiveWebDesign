@@ -7,15 +7,15 @@ body {
 }
 
 .main-section {
-    width: 60%;
-    padding-left: min(27%, 300px);
+    width: 65%;
+    padding-left: 30%; /*min(27%, 300px);*/
 }
 
 #navbar {
     background-color: #1F2A44;
     border-radius: 16px;
     width: 25%;
-    height: 95%;
+    height: 98%;
     max-width: 226px;
     position: fixed;
     z-index: 1;
@@ -108,3 +108,22 @@ h2 {
     }
 }
 
+pre, code {
+    max-width: 100%; /* Ensure they don't exceed their container */
+    overflow-x: auto; /* Allow horizontal scrolling if content is too wide */
+    white-space: pre-wrap;
+    word-wrap: break-word; 
+}
+
+pre {
+    background-color: 
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace; /* Use monospace font for code */
+    color: #2c3e50; 
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace; /* Use monospace font */
+    color: #2c3e50;
+}
