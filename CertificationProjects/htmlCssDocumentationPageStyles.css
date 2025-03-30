@@ -12,58 +12,61 @@ body {
     background-color: #ecf0f1;
     color: #2c3e50;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 14px; 
+    font-size: 12px;
     line-height: 1.5;
-    display: flex;
-    flex-direction: row;
     min-height: 100vh;
 }
 
-.main-section, footer {
-    margin-left: 27vw;
-    width: calc(100vw - 28vw - 10px);
+/* Main container - holds navbar and content */
+#main-doc {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     padding: 10px;
-    box-sizing: border-box; /* Keeps padding and border inside the width */
 }
 
+/* Navbar styles - mobile first */
 #navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /*High value to ensure it stays on top*/
     background-color: #1F2A44;
+    width: 100%;
+    padding: 10px;
+    order: -1; /* Ensure navbar comes first */
     border-radius: 18px;
-    width: 25vw;
-    height: calc(100% - 20px);
-    position: fixed;
-    overflow-y: auto;
-    top: 10px;
-    left: 10px;
     text-align: center;
 }
 
 #navbar header {
     color: #ffffff;
-    font-size: 16px;
-    padding: 10px 5px;
+    font-size: 1.3rem;
+    padding: 10px auto;
     font-weight: bold;
+}
+
+#navbar ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 #navbar li {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    border-bottom: 1px solid #ffffff;
+}
+
+#navbar li:last-child {
+    border-bottom: none;
 }
 
 #navbar a {
     color: #ffffff;
     text-decoration: none;
-    padding: 10px;
+    padding: 5px;
     display: block;
     text-align: center;
-    border-bottom: 1px solid #ffffff;
-    transition: background-color 0.3s, color 0.3s; 
-    font-size: 14px;
-}
-
-#navbar ul li:last-child a {
-    border-bottom: none;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 #navbar a:hover {
@@ -71,128 +74,88 @@ body {
     color: #1F2A44;
 }
 
+/* Content area */
+#content {
+    padding: 15px;
+    flex: 1; /*Allow content to fill available space by shrinking and growing*/
+}
+
+.main-section {
+    margin-bottom: 30px;
+}
+
+/* Desktop layout */
+@media (min-width: 769px) {
+    body {
+        font-size: 14px;
+    }
+
+    #main-doc {
+        flex-direction: row;
+    }
+
+    #navbar {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        height: calc(100vh - 20px);
+        width: 300px;
+        overflow-y: auto;
+        padding: 20px 10px;
+    }
+
+    #content {
+        margin-left: 300px;
+        padding: 20px 40px;
+        width: calc(100% - 300px);
+    }
+}
+
+/* Tablet adjustments */
+@media (max-width: 768px) and (min-width: 481px) {
+    body {
+        font-size: 13px;
+    }
+}
+
 .main-section header {
     background-color: #1F2A44;
     color: #ffffff;
-    font-size: 16px;
-    padding: 5px;
-    text-align: center;
+    font-size: 1.2rem;
+    padding: 10px 15px;
     border-radius: 5px;
     margin: 20px 0;
-    font-weight: bold;
-}
-
-.main-section header:first-of-type {
-    margin-top: 0;
+    text-align: center;
 }
 
 h1 {
-    font-size: 16px; 
-    margin: 10px 0;
+    font-size: 1.1rem;
+    margin: 15px 0 10px;
 }
 
 h2 {
-    font-size: 14px; 
-    margin: 10px 0;
-}
-
-p { 
-    margin: 0;
-}
-
-.main-section ul {
-    list-style-type: disc;
-    margin-left: 15px;
-    margin-top: 0px;
+    font-size: 1rem;
+    margin: 12px 0 8px;
 }
 
 pre code {
     display: block;
-    white-space: pre; /* Keeps indentation as written */
-    text-align: left;
-    margin: 10px 0;
-    padding: 10px;
+    white-space: pre;
     background-color: #f4f4f4;
     border: 1px solid #ddd;
     border-radius: 5px;
+    padding: 12px;
+    margin: 15px 0;
     overflow-x: auto;
     font-family: 'Courier New', monospace;
     color: #2c3e50;
-}
-
-#References ul {    
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-#References ul a{
-    color: #4d5d84;
-}
-
-#References ul a:visited{
-    color: #7e68b8;
-}
-
-#References ul a:hover{
-    color: #7a93d2;
+    font-size: 0.9em;
 }
 
 footer {
     color: #1F2A44;
     text-align: center;
+    padding: 20px;
     font-size: 0.8em;
     font-style: italic;
 }
-
-/* Media Queries */
-@media (max-width: 768px) and (min-width: 551px) {
-    body, #navbar a, h2 {
-        font-size: 12px;
-    }
-
-    #navbar header {
-        font-size: 16px;
-    }
-
-    .main-section header, h1 {
-        font-size: 14px;
-    }
-
-
-}
-
-@media (max-width: 550px) {
-    body {
-        padding: 10px;
-        font-size: 10px;
-        flex-direction: column;
-    }
-    .main-section, footer, #navbar {
-        width: calc(100% - 10px);
-        margin: 10px auto;
-        box-sizing: border-box; /* Keeps padding and border inside the width */
-        padding: 0;
-    }
-    #navbar {
-        position: sticky;
-        top: 0;
-        border-radius: 5px;
-        overflow-y: auto;
-        height: auto;
-        max-height: 50vh; 
-    }
-    #navbar header {
-        font-size: 14px;
-    }
-
-    .main-section header, h1 {
-        font-size: 12px;
-    }
-
-    #navbar a, h2 {
-        font-size: 10px;
-    }
-    
-}
-
