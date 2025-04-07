@@ -85,7 +85,7 @@ body {
 }
 
 /* Desktop layout */
-@media (min-width: 769px) {
+@media only screen and (min-width: 769px) {
     body {
         font-size: 14px;
     }
@@ -112,7 +112,7 @@ body {
 }
 
 /* Tablet adjustments */
-@media (max-width: 768px) and (min-width: 481px) {
+@media only screen and (max-width: 768px) and (min-width: 481px) {
     body {
         font-size: 13px;
     }
