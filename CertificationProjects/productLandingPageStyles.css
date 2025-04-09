@@ -205,9 +205,9 @@ h3, th  {
     text-align: left;
 }
 
-#contact-form input, textarea {
+#contact-form input:not([type="submit"]), textarea {
     background-color: var(--form-background-color);
-    border: none;
+    border: 2px solid transparent;
     width: 100%;
     padding: 0.5em;
     border-radius: 5px;
@@ -216,19 +216,18 @@ h3, th  {
 
 #contact-form textarea:focus, #contact-form input:focus {
     outline: none;
-    border: 2px solid var(--background-color-light);
     border: 2px solid var(--background-color);
 }
 
 #submit-button {
     display: block;
-    width: 50%;
+    height: auto;
     margin: 1em auto;
-    height: 3em;
+    padding: 1em;
     font-size: 1.1em;
-    background-color: var(--background-color);
-    border: none;
-    color: var(--text-color-light);
+    background-color: var(--background-color-light);
+    border: 2px solid var(--background-color);
+    color: var(--text-color);
     border-radius: 5px;
     cursor: pointer;
 }
