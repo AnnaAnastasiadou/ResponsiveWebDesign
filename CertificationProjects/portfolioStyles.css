@@ -1,0 +1,97 @@
+* { 
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: radial-gradient(
+        circle at center,
+        #11172f,
+        #070317 
+    );
+    color: #f0f0f0;
+    font-family: Montserrat,'Roboto Mono', monospace;
+    font-size: 14px;
+    margin: 10px;
+    padding: 10px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    text-transform: uppercase;
+    border: 1px solid rgba(255,255,255,0.5);
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 25px;  
+    font-size: 1em;
+}      
+
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    font-size: 1em;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-button {
+    color: #f0f0f0;
+    text-decoration: none;
+}
+
+#name-nav {
+    font-size: 1.1em;
+    text-align: center;
+    margin: 0;
+}
+
+.home-container h2{
+
+}
+
+footer {
+    padding: 10px;
+    font-size: 0.8em;
+}
+
+@media screen and (max-width: 480px) {
+
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    body{
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    body{
+        font-size: 18px;
+    }
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5em 1em;
+        margin: 0;
+    }
+
+    .nav-list {
+        flex-direction: row;
+        gap: 2em;
+    }
+}
