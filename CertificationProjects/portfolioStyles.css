@@ -28,9 +28,9 @@ body {
     padding: 15px;
     border-radius: 25px;  
     font-size: 1em;
-    background: rgba(15, 23, 42, 0.8); /* Deep blue-glass */
+    background: rgba(15, 23, 42, 0.8); 
     position: fixed;
-    top: 2.5%;
+    top: 1%;
     left: 2.5%;
     width: 95%;
     height: auto;
@@ -80,7 +80,7 @@ section {
 
 
 #home-text h1 {
-    color: #7fdbff; /* Cyan */
+    color: #7fdbff; 
     color: #ffffff;
     font-weight: 300;
     letter-spacing: 1px;
@@ -107,6 +107,7 @@ footer {
         flex-direction: column;
         gap: 1em;
         padding: 1em;   
+        text-align: center;
     }
 
     #home-text {
@@ -114,7 +115,8 @@ footer {
     }
 
     #home-image {
-        width: 80%;
+        width: 50%;
+        min-width: 150px;
     }
 }
 
