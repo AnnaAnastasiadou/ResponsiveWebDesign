@@ -7,11 +7,18 @@
         <link rel="stylesheet" href="./portfolioStyles.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="portfolio.js" defer></script>
     </head>
     <body>
         <nav id="navbar">
-            <ul class="nav-list">
+            <button class="hamburger" aria-label="Toggle menu">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+            <ul class="nav-list collapsible">
                 <li><a class="nav-button" href="#home">Home</a></li>
                 <li><a class="nav-button" href="#aboutme">About Me</a></li>
                 <li><a class="nav-button" href="#projects">Projects</a></li>
@@ -25,10 +32,127 @@
                     <h2>WEB DEVELOPER</h2>
                     <p class="tagline">Bringing scientific precision from physics to web development.</p>
                 </div>
-                <img src="./images/womanCoding.png" alt="cartoon of a woman coding" id="home-image">
+                <img src="./images/womanCoding2.png" alt="cartoon of a woman coding" id="home-image">
             </section>
             <section id="aboutme">
-                <h2>About Me</h2>
+                    <h2>Let Me Introduce Myself</h2>
+                        <p class="intro">
+                            <img class="emoji" width="20" height="20" src="https://img.icons8.com/emoji/48/waving-hand-emoji.png" alt="waving-hand-emoji"/> Γεια σου! I'm Anna - a passionate web developer based in Nicosia, Cyprus. 
+                            My journey from physics to tech has given me a unique perspective on creating digital solutions that combine analytical 
+                            precision with creative design.
+                        </p>
+                            <div class="journey-section">
+                                <h3>My Journey Into Tech</h3>
+                                <div class="education-highlight">
+                                    <div class="degree">
+                                        <div class="degree-header">
+                                            <div>
+                                                <h4>BSc Physics (First Class Honours)</h4>
+                                                <p class="university">Cardiff University | 2020-2023</p>
+                                            </div>
+                                        </div>
+                                        <ul class="degree-highlights">
+                                            <li>Developed computational and analytical skills</li>
+                                            <li>Completed end-to-end simulation of ARIEL space mission</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="degree">
+                                        <div class="degree-header">
+                                            <div>
+                                                <h4>MSc Computer Science (Merit)</h4>
+                                                <p class="university">University of Edinburgh | 2023-2024</p>
+                                            </div>
+                                        </div>
+                                        <ul class="degree-highlights">
+                                            <li>Dissertation on PostgreSQL query plan similarity</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="internship">
+                                    <h4>Web Development Internship</h4>
+                                    <p class="company">Dynamic Works Ltd, Nicosia | 2022</p>
+                                    <p class="internship-description">This hands-on experience transformed my career path, revealing how technical skills could bring creative visions to life:</p>
+                                    <ul class="internship-skills">
+                                        <li><span class="skill-badge">Practical Implementation</span> Transformed concepts into functional websites</li>
+                                        <li><span class="skill-badge">Creative Discovery</span> Explored the potential of web technologies</li>
+                                        <li><span class="skill-badge">Career Inspiration</span> Motivated me to pursue formal CS education</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="skills-section">
+                                <h3>Technical Toolkit</h3>
+                                    <div class="skill-category">
+                                        <div class="skill-header">
+                                            <h4>Frontend Development</h4>
+                                        </div>
+                                        <ul>
+                                            <li>HTML5 & CSS3 (Sass)</li>
+                                            <li>JavaScript (ES6+)</li>
+                                            <li>React framework</li>
+                                            <li>Responsive Web Design</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="skill-category">
+                                        <div class="skill-header">
+                                            <h4>Backend & Databases</h4>
+                                        </div>
+                                        <ul>
+                                            <li>Node.js</li>
+                                            <li>PostgreSQL</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="skill-category">
+                                        <div class="skill-header">
+                                            <h4>Tools & Methods</h4>
+                                        </div>
+                                        <ul>
+                                            <li>Git version control</li>
+                                            <li>Linux environment</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="personal-section">
+                                <h3 class="section-title">Beyond Programming</h3>
+                                <div class="hobbies">
+                                    <div class="hobby">
+                                        <p><img class="emoji" width="20" height="20" src="https://img.icons8.com/color/48/tennis.png" alt="tennis-icon"/> Friendly tennis and padel matches</p>
+                                    </div>
+                                    <div class="hobby">
+                                        <p><img class="emoji" width="20" height="20" src="https://img.icons8.com/emoji/48/guitar-emoji.png" alt="guitar-icon"/> Playing guitar and learning new songs</p>
+                                    </div>
+                                    <div class="hobby">
+                                        <p><img class="emoji" width="20" height="20" src="https://img.icons8.com/?size=100&id=63766&format=png&color=000000" alt="globe-icon"/> Planning international adventures</p>
+                                    </div>
+                                    <div class="hobby">
+                                        <p><img class="emoji" width="20" height="20" src="https://img.icons8.com/emoji/48/beach-with-umbrella.png" alt="beach-with-umbrella-icon"/> Enjoying Cyprus' beaches and sun</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cta-section">
+                                <h3>Let's Build Something Together</h3>
+                                <p>I'm currently available for web development projects in Cyprus and internationally, eager to expand my expertise while delivering exceptional results.</p>
+                                <div class="cta-buttons">
+                                    <a href="./Anna_Anastasiadou_CV.pdf" download class="cta-button primary">
+                                        <img class="emoji" width="20" height="20" src="https://img.icons8.com/officel/80/pdf-2.png" alt="pdf-icon"/></span> Download CV
+                                    </a>
+                                    <a href="#contactme" class="cta-button secondary">
+                                        <img class="emoji" width="20" height="20" src="https://img.icons8.com/office/40/comments.png" alt="conversation-icon"/> Start a Conversation
+                                    </a>
+                                    <a href="#projects" class="cta-button secondary">
+                                        <img class="emoji" width="20" height="20" src="https://img.icons8.com/color/48/laptop--v1.png" alt="laptop-icon"/> Look at My Projects 
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </section>
             <section id="projects">
                 <h2>Projects</h2>
