@@ -82,18 +82,23 @@ body {
 }
 
 #navbar {
+    position: fixed;
+    top: 0;
+    left: 2%;
+    width: 96%;
+    padding-top: 1%;
+    border-radius: 0 0 25px 25px;
     text-transform: uppercase;
     background: transparent;
     border: none;
     position: fixed;
-    top: 1%;
-    left: 2.5%;
-    width: 95%;
     z-index: 1000;
-    transition: all 0.3s ease;
+    transition: all 0.1s ease;
 }      
 
 .nav-list {
+    position: relative;
+    width: 100%;
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -133,7 +138,7 @@ body {
 
 section {
     border-bottom: 1px solid rgba(255,255,255,0.5);
-    padding: 20px;
+    padding: 30px;
 }
 
 #home {
@@ -203,12 +208,16 @@ footer {
         display: none;
     }
 
+    #navbar {
+        background: #070317;
+    }
+
     .nav-list {
-        opacity: 1;
         max-height: none;
         padding: 0;
         flex-direction: row;
         justify-content: flex-start;
         gap: 1em;
     }
+
 }
