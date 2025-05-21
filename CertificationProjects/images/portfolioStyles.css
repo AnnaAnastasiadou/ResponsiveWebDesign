@@ -1,0 +1,168 @@
+:root {
+    --nav-bg: #494949;
+    --body-bg: #f1f2f6;
+    --projects-bg: #27187e;
+    --text-dark: #292929;
+    --text-light: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    background-color: var(--body-bg);
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+}
+
+h1, h2, h3 {
+    margin: 1rem 0;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--nav-bg);
+    padding: 1rem;
+    z-index: 1000;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+.nav-link {
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+}
+
+.nav-link:hover {
+    background: #555;
+    border-radius: 4px;
+}
+
+section {
+    min-height: 100vh;
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#welcome-section {
+    background: linear-gradient(
+        #27187e 0%,
+        #6e85fb 100%
+        );
+    color: var(--text-light);
+}
+
+#projects {
+    background: var(--projects-bg);
+    color: var(--text-light);
+    padding: 68px 2rem;
+}
+
+#frontend-projects {
+    display: flex;
+    justify-content: center;
+}
+
+.project-tile {
+    background: var(--text-light);
+    color: var(--text-dark);
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 400px;
+}
+
+.project-tile img {
+    width: 100%;
+    height: auto;
+    margin: 1rem 0;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.contact-links a {
+    color: var(--nav-bg);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border: 1px solid var(--nav-bg);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.contact-links a:hover {
+    background: var(--nav-bg);
+    color: var(--text-light);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: var(--nav-bg);
+    color: var(--text-light);
+}
+
+@media (max-width: 768px) {
+    html {
+    font-size: 14px;
+    }
+
+    #navbar {
+        overflow-x: auto;
+    }
+
+    .nav-list {
+        justify-content: center;
+    }
+    
+    section {
+        padding: 2rem 1rem;
+    }
+
+    #projects {
+        padding: 60px 2rem; /* Adjusted padding for smaller menu */
+    }
+    
+    .project-tile {
+        margin: 1rem 0;
+    }
+}
