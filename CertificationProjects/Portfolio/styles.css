@@ -1,7 +1,7 @@
 :root {
     --nav-bg: #494949;
     --body-bg: #f1f2f6;
-    --projects-bg: #27187e;
+    --projects-bg: rgba(110,133,251,0.8);
     --text-dark: #292929;
     --text-light: #ffffff;
 }
@@ -78,16 +78,17 @@ section {
 }
 
 #welcome-section {
-    background: linear-gradient(
-        #27187e 0%,
-        #6e85fb 100%
+    background: 
+        linear-gradient(135deg,
+            rgba(39,24,126,0.9) 0%,
+            rgba(110,133,251,0.8) 100%
         );
     color: var(--text-light);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
 #projects {
     background: var(--projects-bg);
-    color: var(--text-light);
     padding: 68px 2rem;
 }
 
